@@ -1,18 +1,3 @@
-# Time-Aware Link Prediction
-Author: Jaroslav Kuchar
-
-Time-Aware Link Prediction algorithm and all additional functions are written in <a href="http://www.r-project.org/">R</a>. We model data as a tensor and use an ageing function to model retention of information over time. We run a tensor factorization followed by an evaluation of existence of links in reconstructed incidence matrices. The core of the factorization is based on the <a href="http://www.cip.ifi.lmu.de/~nickel/data/paper-icml2011.pdf">RESCAL</a> [1].
-
-# Example Usage
-
-The following graph represents an experpt of <a href="http://www.programmableweb.com">ProgrammableWeb</a> data. 
-
-![dataset](doc/pw.png)
-
-The following code imports the data and runs experiment. Note that it is only for demonstration purposes. The example does not contain significant amount of data that evolve over time to present all features of the algorithm.
-
-```R
-
 # import algorithm
 source("./lib/talp.R")
 
@@ -80,14 +65,3 @@ factorizationOutput <- factorization(t, 10, 100, 0.01)
 predictedLinks <- topNtargets("/service/Google-Maps-API","assignedTag", t, factorizationOutput)
 print(predictedLinks[grep("/tag/",predictedLinks[,1]),])
 # output --> /tag/travel
-
-
-```
-
-# References
-
-[1] Maximilian Nickel, Volker Tresp, Hans-Peter-Kriegel, "A Three-Way Model for Collective Learning on Multi-Relational Data", Proceedings of the 28th International Conference on Machine Learning (ICML'11), 809--816, ACM, Bellevue, WA, USA, 2011
-
-
-# License
-The GPL version 3, http://www.gnu.org/licenses/gpl-3.0.txt
