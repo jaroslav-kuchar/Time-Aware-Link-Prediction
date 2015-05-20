@@ -3,6 +3,18 @@ Author: Jaroslav Kuchar
 
 Time-Aware Link Prediction algorithm and all additional functions are written in <a href="http://www.r-project.org/">R</a>. We model data as a tensor and use an ageing function to model retention of information over time. We run a tensor factorization followed by an evaluation of existence of links in reconstructed incidence matrices. The core of the factorization is based on the <a href="http://www.cip.ifi.lmu.de/~nickel/data/paper-icml2011.pdf">RESCAL</a> [1].
 
+# Research
+If you publish research that uses Time-Aware Link Prediction, please cite:
+
+```
+@inproceedings{Kuchar2015-WEBIST-TimeAwareLinkPrediction,
+    author    = { Jaroslav Kuchar and Milan Dojchinovski and Tomas Vitvar },
+    title     = { Time-Aware Link Prediction in RDF Graphs },
+    booktitle = { 11th International Conference on Web Information Systems and Technologies (WEBIST) },
+    year      = 2015
+}
+```
+
 # Example Usage
 
 The following graph represents an experpt of <a href="http://www.programmableweb.com">ProgrammableWeb</a> data. 
